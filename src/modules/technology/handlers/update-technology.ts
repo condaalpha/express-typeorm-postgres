@@ -11,10 +11,10 @@ export async function updateTechnology(
 	next: NextFunction
 ): Promise<void> {
 	const technologyId: number = parseInt(req.params.technologyId);
-	const updateResult = await updateTechnologyEntry(technologyId, {
-		displayName: req.body.name,
-		description: req.body.description,
-	});
+        const updateResult = await updateTechnologyEntry(technologyId, {
+                displayName: req.body.displayName,
+                description: req.body.description,
+        });
 
 	if (updateResult.type === Result.ERROR) {
 		LogHelper.error(updateResult.message, updateResult.error);

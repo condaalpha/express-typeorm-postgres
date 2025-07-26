@@ -10,9 +10,9 @@ const MOCK_REQUEST: any = {
 	params: {
 		technologyId: '1',
 	},
-	body: {
-		name: 'Jest',
-	},
+        body: {
+                displayName: 'Jest',
+        },
 };
 const MOCK_RESPONSE: any = {
 	status: jest.fn(),
